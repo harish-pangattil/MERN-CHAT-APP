@@ -38,7 +38,7 @@ const server = http.createServer(app);
 // Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://mern-chat-app-1-0dan.onrender.com/",
     methods: ["GET", "POST"],
   },
 });

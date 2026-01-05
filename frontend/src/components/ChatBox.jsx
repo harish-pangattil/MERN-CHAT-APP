@@ -33,7 +33,7 @@ function ChatBox({ user }) {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/messages");
+        const res = await fetch("https://mern-chat-app-xzs6.onrender.com/api/messages");
         const data = await res.json();
         setMessages(data);
       } catch (err) {
