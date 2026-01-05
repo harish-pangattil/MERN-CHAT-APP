@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "https://mern-chat-app-1-0dan.onrender.com/", credentials: true }));
+app.use(cors({ origin: "https://mern-chat-app-1-0dan.onrender.com/", credentials: true ,headers: ["Content-Type"]}));
 app.use(express.json());
 
 // Auth routes
@@ -40,6 +40,7 @@ const io = new Server(server, {
   cors: {
     origin: "https://mern-chat-app-1-0dan.onrender.com/",
     methods: ["GET", "POST"],
+    headers: ["Content-Type"]
   },
 });
 
