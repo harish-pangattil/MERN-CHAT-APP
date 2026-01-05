@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 const token = localStorage.getItem("token");
 
 // Connect to backend Socket.IO server
-const socket = io("http://localhost:5000", {
+const socket = io("https://mern-chat-app-xzs6.onrender.com", {
   auth: { token },          // optional: send token for backend auth
   transports: ["websocket"] // force WebSocket transport
 });
