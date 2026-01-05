@@ -11,7 +11,7 @@ function ChatBox({ user }) {
   useEffect(() => {
     if (!user?.token) return;
 
-    const s = io("http://localhost:5000", {
+    const s = io("https://mern-chat-app-xzs6.onrender.com", {
       auth: { token: user.token },
       transports: ["websocket"],
     });
